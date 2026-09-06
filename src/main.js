@@ -710,7 +710,7 @@ function reset() {
 }
 
 async function init() {
-  const res = await fetch('/green-data.json');
+  const res = await fetch(`${import.meta.env.BASE_URL}green-data.json`);
   state.data = await res.json();
   setupView(state.data);
   render();
