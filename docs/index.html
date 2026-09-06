@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Serrano #1 Putt Reader</title>
+    <script type="module" crossorigin src="/serrano-putt-reader/assets/index-DnzR15Cu.js"></script>
+    <link rel="stylesheet" crossorigin href="/serrano-putt-reader/assets/index-Bwx5hRH0.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="hole">1</span>
+          <div>
+            <h1>Serrano #1</h1>
+            <p>Green putt reader</p>
+          </div>
+        </div>
+        <button id="resetBtn" class="btn ghost" type="button">Reset</button>
+      </header>
+
+      <section class="readout" id="readout" aria-live="polite">
+        <div class="stat">
+          <span class="label">Distance</span>
+          <strong id="distVal">—</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Grade</span>
+          <strong id="gradeVal">—</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Break</span>
+          <strong id="breakVal">Tap ball &amp; cup</strong>
+        </div>
+        <div class="stat aim">
+          <span class="label">Aim tip</span>
+          <strong id="aimVal">Place both markers</strong>
+        </div>
+      </section>
+
+      <main class="stage-wrap">
+        <canvas id="greenCanvas" width="900" height="620" aria-label="Serrano hole 1 green diagram"></canvas>
+        <div class="legend">
+          <div class="swatch"><i class="flat"></i> Flat</div>
+          <div class="swatch"><i class="mid"></i> Mid</div>
+          <div class="swatch"><i class="steep"></i> Steep</div>
+          <div class="hint">Tap to place · drag to move · heat + arrows = slope</div>
+        </div>
+      </main>
+
+      <footer class="toolbar">
+        <button id="modeBall" class="btn mode active" type="button" data-mode="ball">
+          <span class="dot ball"></span> Ball
+        </button>
+        <button id="modeCup" class="btn mode" type="button" data-mode="cup">
+          <span class="dot cup"></span> Cup
+        </button>
+        <button id="toggleHeat" class="btn ghost" type="button">Heat</button>
+        <button id="toggleArrows" class="btn ghost" type="button">Arrows</button>
+        <button id="toggleChart" class="btn ghost" type="button">Chart</button>
+      </footer>
+
+      <dialog id="chartDialog">
+        <form method="dialog">
+          <header>
+            <h2>Source chart — Serrano #1</h2>
+            <button value="close" class="btn ghost" type="submit">Close</button>
+          </header>
+          <img src="/serrano-putt-reader/serrano-1-green.png" alt="Serrano hole 1 professional green chart" />
+          <p class="fine">Scale 3/8″ = 5 yd · North toward top-right · digitized for this app</p>
+        </form>
+      </dialog>
+    </div>
+  </body>
+</html>
